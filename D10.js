@@ -552,6 +552,15 @@ addTag()
 
 */
 
+const halfTree = (rows) => {
+  let halfTree = ''
+  for (let i = 1; i <= rows; i++) {
+    halfTree += '*'.repeat(i) + '\n'
+  }
+  return halfTree
+}
+console.log(halfTree(5))
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -564,6 +573,29 @@ addTag()
 
 */
 
+const tree = (rows) => {
+  let pineTree = ''
+  for (let i = 1; i <= rows; i++) {
+    pineTree += ' '.repeat(rows - i) + '*'.repeat(i * 2 - 1) + '\n'
+  }
+  return pineTree
+}
+console.log(tree(5))
+
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+const isItPrime = (n) => {
+  if (n <= 1) {
+    return false
+  }
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return false
+    }
+  }
+  return true
+}
+
+console.log(isItPrime(22))
